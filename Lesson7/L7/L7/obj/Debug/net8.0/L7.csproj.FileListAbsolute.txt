@@ -1,0 +1,5 @@
+D:\NaukaIT\C#\Ropos\ASP_week2\Lesson7\L7\L7\obj\Debug\net8.0\L7.GeneratedMSBuildEditorConfig.editorconfig
+D:\NaukaIT\C#\Ropos\ASP_week2\Lesson7\L7\L7\obj\Debug\net8.0\L7.AssemblyInfoInputs.cache
+D:\NaukaIT\C#\Ropos\ASP_week2\Lesson7\L7\L7\obj\Debug\net8.0\L7.AssemblyInfo.cs
+D:\NaukaIT\C#\Ropos\ASP_week2\Lesson7\L7\L7\obj\Debug\net8.0\L7.csproj.CoreCompileInputs.cache
+D:\NaukaIT\C#\Ropos\ASP_week2\Lesson7\L7\L7\obj\Debug\net8.0\L7.sourcelink.json
