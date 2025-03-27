@@ -1,4 +1,6 @@
-﻿using static System.Runtime.InteropServices.JavaScript.JSType;
+﻿using System;
+using System.Diagnostics;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace L7
 {
@@ -214,8 +216,191 @@ namespace L7
 
             int sum = mat + fiz + chem;
             Console.WriteLine($"Twój wynik to {sum}");
+
             if ((mat > 70) && (sum > 180) && ((fiz>55) || (chem>45)) && ((mat+fiz>150) || (mat+chem>150)) )   Console.WriteLine("Zostałeś dopuszczony do rekrutacji.");
             else Console.WriteLine("Nie zostałeś dopuszczony do rekrutacji.");
+        }
+        static void zda9()
+        {
+            /*
+             9. Napisz program, który odczyta temperaturę I zwróci nazwę jak w 
+                poniższych kryteriach 
+                Temp < 0 – cholernie piździ 
+                Temp 0 – 10 – zimno 
+                Temp 10 – 20 – chłodno 
+                Temp 20 – 30 – w sam raz 
+                Temp 30 – 40 – zaczyna być słabo, bo gorąco 
+                Temp >= 40 – a weź wyprowadzam się na Alaskę. 
+ 
+                Dane testowe : 41 
+                Rezultat w terminalu : 
+                a weź wyprowadzam się na Alaskę.  
+             */
+            Console.WriteLine("Podaj temperaturę: ");
+            Int32.TryParse(Console.ReadLine(), out int temp);
+
+            if (temp < 0) Console.WriteLine("cholernie piździ");
+            else if (temp < 10) Console.WriteLine("zimno");
+            else if (temp < 20) Console.WriteLine("chłodno");
+            else if (temp < 30) Console.WriteLine("w sam raz");
+            else if (temp < 40) Console.WriteLine("zaczyna być słabo, bo gorąco");
+            else Console.WriteLine("a weź wyprowadzam się na Alaskę");
+
+        }
+        static void zda10()
+        {
+            /*
+             10. Napisz program, który sprawdzi, czy z 3 podanych długości można 
+                stworzyć trójkąt 
+                Dane testowe : 40 55 65 
+                Rezultat w terminalu : 
+                Można zbudować trójkąt
+             */
+
+            Console.WriteLine("Podaj pierwszy bok: ");
+            Int32.TryParse(Console.ReadLine(), out int B1);
+
+            Console.WriteLine("Podaj drugi bok: ");
+            Int32.TryParse(Console.ReadLine(), out int B2);
+
+            Console.WriteLine("Podaj trzeci bok: ");
+            Int32.TryParse(Console.ReadLine(), out int B3);
+
+            if (B1<B2+B3 || B2<B1+B3 || B3<B1+B2) {
+                Console.WriteLine("Można zbudować trójkąt");
+            }
+            else Console.WriteLine("Nie można zbudować trójkąta");
+        }
+        static void zda11()
+        {
+            /*
+             Napisz program, który zmieni ocenę ucznia na jej opis wg podanej tabeli: 
+            6 Celujący 
+            5 Bardzo dobry 
+            4 Dobry 
+            3 Dostateczny 
+            2 Dopuszczający 
+            1 Niedostateczny 
+
+            Dane testowe : 3 
+            Rezultat w terminalu : 
+            Dostateczny 
+             */
+            Console.WriteLine("Podaj swoją ocenę: ");
+            Int32.TryParse(Console.ReadLine(), out int grade);
+
+            switch (grade)
+            {
+                case 1:
+                    Console.WriteLine("Niedostateczny");
+                    break;
+                case 2:
+                    Console.WriteLine("Dopuszczający");
+                    break;
+                case 3:
+                    Console.WriteLine("Dostateczny");
+                    break;
+                case 4:
+                    Console.WriteLine("Dobry");
+                    break;
+                case 5:
+                    Console.WriteLine("Bardzo dobry");
+                    break;
+                case 6:
+                    Console.WriteLine("Celujący");
+                    break;
+                default:
+                    Console.WriteLine("Nie ma takiej oceny!");
+                    break;
+            }
+        }
+        static void zad12()
+        {
+            /*
+             12. Napisz program, który pobierze numer dnia tygodnia i wyświetli jego 
+                nazwę 
+                Dane testowe : 4 
+                Rezultat w terminalu : 
+                Czwartek
+             */
+            Console.WriteLine("Podaj numer dnia tygodnia: ");
+            Int32.TryParse(Console.ReadLine(), out int day);
+
+            switch (day)
+            {
+                case 1:
+                    Console.WriteLine("Poniedziałek");
+                    break;
+                case 2:
+                    Console.WriteLine("Wtorek");
+                    break;
+                case 3:
+                    Console.WriteLine("Środa");
+                    break;
+                case 4:
+                    Console.WriteLine("Czwartek");
+                    break;
+                case 5:
+                    Console.WriteLine("Piątek");
+                    break;
+                case 6:
+                    Console.WriteLine("Sobota");
+                    break;
+                case 7:
+                    Console.WriteLine("Niedziela");
+                    break;
+                default:
+                    Console.WriteLine("Tydzień ma 7 dni!");
+                    break;
+            }
+        }
+        static void zad13() 
+        {
+            /*
+             13. Napisz program, który będzie posiadał proste menu (wg. Wzoru poniżej) I 
+                    będzie prostym kalkulatorem 
+                    Podaj pierwszą liczbę:  
+                    … 
+                    Podaj drugą liczbę: 
+                    … 
+                    Podaj numer operacji do wykonania: 
+                    1. Dodawanie 
+                    2. Odejmowanie 
+                    3. Mnożenie 
+                    4. Dzielenie 
+    … 
+                    Twój wynik to:
+             */
+
+            Console.WriteLine("Podaj pierwszą liczbę: ");
+            Int32.TryParse(Console.ReadLine(), out int a);
+
+            Console.WriteLine("Podaj drugą liczbę: ");
+            Int32.TryParse(Console.ReadLine(), out int b);
+
+            operation:
+            Console.WriteLine("Podaj numer operacji do wykonania:\r\n 1. Dodawanie \r\n2. Odejmowanie \r\n 3. Mnożenie \r\n 4. Dzielenie");
+            Int32.TryParse(Console.ReadLine(), out int op);
+
+            switch (op)
+            {
+                case 1:
+                    Console.WriteLine($"Twój wynik to: {a + b}");
+                    break;
+                case 2:
+                    Console.WriteLine($"Twój wynik to: {a - b}");
+                    break;
+                case 3:
+                    Console.WriteLine($"Twój wynik to: {a * b}");
+                    break;
+                case 4:
+                    Console.WriteLine($"Twój wynik to: {a / b}");
+                    break;
+                default :
+                    Console.WriteLine("Wybierz od 1 do 4");
+                    goto operation;
+
+            }
         }
     }
 }
