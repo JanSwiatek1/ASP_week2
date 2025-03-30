@@ -97,5 +97,65 @@ namespace L8
             }
         }
 
+        public void zad5()
+        {
+            //5. Napisz program, który dla liczb od 1 do 20 wyświetli na ekranie ich 3 potęgę.
+
+            for(int i = 1;i < 20; i++)
+            {
+                int cube = i * i * i;
+                Console.WriteLine($"Liczba: {i}, Trzecia potęga: {cube}");
+
+            }
+        }
+
+        public void zad6()
+        {
+            //6. Napisz program, który dla liczb od 0 do 20 obliczy sumę wg wzoru:  1 + ½ +1 / 3 + ¼ itd.
+            int w = 0;
+            for ( int i = 1; i < 20; i++)
+            {
+                w += 1 / i;
+            }
+            Console.WriteLine(w);
+        }
+
+        public void zad7()
+        {
+            //7. Napisz program, który dla liczby zadanej przez użytkownika narysuje diament o krótszej
+            //   przekątnej o długości wprowadzonej przez użytkownika i wg wzoru:
+
+            Console.WriteLine("Podaj długość krótszej przekątnej diamentu: ");
+            Int32.TryParse(Console.ReadLine(), out int d);
+            for (int i = 1; i <= d; i++)
+            {
+                for (int j = d - i; j > 0; j--)
+                {
+                    Console.Write(" ");
+
+                }
+                for (int j = 1; j <= i; j++)
+                {
+                    Console.Write("* ");
+                }
+
+                Console.WriteLine();
+            }
+
+            for (int i = 1; i <= d; i++)
+            {
+                for (int j = 1; j <= i; j++)
+                {
+                    Console.Write(" ");
+
+                }
+                for (int j = d - i; j > 0; j--)
+                {
+                    Console.Write("* ");
+                }
+
+                Console.WriteLine();
+            }
+        }
     }
 }
