@@ -1,0 +1,15 @@
+D:\NaukaIT\C#\Ropos\ASP_week2\L8\L8\bin\Debug\net8.0\L8.exe
+D:\NaukaIT\C#\Ropos\ASP_week2\L8\L8\bin\Debug\net8.0\L8.deps.json
+D:\NaukaIT\C#\Ropos\ASP_week2\L8\L8\bin\Debug\net8.0\L8.runtimeconfig.json
+D:\NaukaIT\C#\Ropos\ASP_week2\L8\L8\bin\Debug\net8.0\L8.dll
+D:\NaukaIT\C#\Ropos\ASP_week2\L8\L8\bin\Debug\net8.0\L8.pdb
+D:\NaukaIT\C#\Ropos\ASP_week2\L8\L8\obj\Debug\net8.0\L8.GeneratedMSBuildEditorConfig.editorconfig
+D:\NaukaIT\C#\Ropos\ASP_week2\L8\L8\obj\Debug\net8.0\L8.AssemblyInfoInputs.cache
+D:\NaukaIT\C#\Ropos\ASP_week2\L8\L8\obj\Debug\net8.0\L8.AssemblyInfo.cs
+D:\NaukaIT\C#\Ropos\ASP_week2\L8\L8\obj\Debug\net8.0\L8.csproj.CoreCompileInputs.cache
+D:\NaukaIT\C#\Ropos\ASP_week2\L8\L8\obj\Debug\net8.0\L8.sourcelink.json
+D:\NaukaIT\C#\Ropos\ASP_week2\L8\L8\obj\Debug\net8.0\L8.dll
+D:\NaukaIT\C#\Ropos\ASP_week2\L8\L8\obj\Debug\net8.0\refint\L8.dll
+D:\NaukaIT\C#\Ropos\ASP_week2\L8\L8\obj\Debug\net8.0\L8.pdb
+D:\NaukaIT\C#\Ropos\ASP_week2\L8\L8\obj\Debug\net8.0\L8.genruntimeconfig.cache
+D:\NaukaIT\C#\Ropos\ASP_week2\L8\L8\obj\Debug\net8.0\ref\L8.dll
