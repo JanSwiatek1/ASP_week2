@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -156,6 +157,79 @@ namespace L8
 
                 Console.WriteLine();
             }
+        }
+
+        public void zad8()
+        {
+            // Napisz program, który odwróci wprowadzony przez użytkownika ciąg znaków. Np. 
+            // Testowe dane: 
+            // Abcdefg
+            // Rezultat
+            // Gfedcba
+
+            Console.WriteLine("Podaj slowo: ");
+            string word = Console.ReadLine();
+            StringBuilder word2 = new StringBuilder();
+
+            for (int i = word.Length - 1; i > 0; i--)
+            {
+                word2.Append(word[i]);
+            }
+            Console.WriteLine(word2.ToString());
+        }
+
+        public void zad9()
+        {
+            // Napisz program, który zamieni liczbę dziesiętną na liczbę binarną.
+            Console.WriteLine("Podaj liczbę dziesiętną: ");
+            int d = int.Parse(Console.ReadLine());
+            List<int> binNum = new List<int>();
+
+            if (d == 0)
+            {
+                Console.WriteLine("0");
+                return;
+            }
+
+            while (d > 0)
+            {
+                int r = d % 2;
+                d = d / 2;
+                binNum.Add(r);
+            }
+
+
+            binNum.Reverse();
+
+
+            Console.Write("Liczba binarna: ");
+            foreach (int bit in binNum)
+            {
+                Console.Write(bit);
+            }
+        }
+        public static void zad10() 
+        {
+            // Napisz program, który znajdzie najmniejszą wspólną wielokrotność dla zadanych 2 liczb.
+            Console.WriteLine("Podaj pierwszą liczbę: ");
+            Int32.TryParse(Console.ReadLine(), out int a);
+
+            Console.WriteLine("Podaj drugą liczbę: ");
+            Int32.TryParse(Console.ReadLine(), out int b);
+
+            int g = Calculate(a, b);
+            int l = (a * b) / g;
+            Console.WriteLine($"Najmniejsza wspólną wielokrotność obu liczb wynosi: {l}");
+        }
+        static int Calculate(int a, int b)
+        {
+            while (b != 0)
+            {
+                int temp = b;
+                b = a % b;
+                a = temp;
+            }
+            return a;
         }
     }
 }
